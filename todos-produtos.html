@@ -33,6 +33,19 @@
     nav a:hover {
       text-decoration: underline;
     }
+    .busca-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .busca-container input {
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
     .todos-produtos {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -92,7 +105,11 @@
   <a href="#">Contato</a>
 </nav>
 
-<section class="todos-produtos">
+<div class="busca-container">
+  <input type="text" id="busca" placeholder="Digite para buscar produtos..." onkeyup="filtrarProdutos()" />
+</div>
+
+<section class="todos-produtos" id="produtos-lista">
   <div class="produto">
     <img src="https://via.placeholder.com/300x200" alt="Produto 1">
     <h2>Produto 1</h2>
@@ -111,12 +128,35 @@
     <p>Descrição do produto 3.</p>
     <div class="preco">R$ 90,00</div>
   </div>
-  <!-- Adicione quantos produtos quiser aqui -->
+  <div class="produto">
+    <img src="https://via.placeholder.com/300x200" alt="Produto 4">
+    <h2>Produto 4</h2>
+    <p>Descrição do produto 4 com palavra especial.</p>
+    <div class="preco">R$ 150,00</div>
+  </div>
+  <!-- Mais produtos aqui -->
 </section>
 
 <footer>
   <p>&copy; Sua Empresa | 2025<br>CNPJ 00.000.000/0000-00<br>Desenvolvido por ElQuincho</p>
 </footer>
+
+<script>
+  function filtrarProdutos() {
+    const filtro = document.getElementById('busca').value.toLowerCase();
+    const produtos = document.querySelectorAll('.produto');
+
+    produtos.forEach(produto => {
+      const titulo = produto.querySelector('h2').textContent.toLowerCase();
+      const descricao = produto.querySelector('p').textContent.toLowerCase();
+      if (titulo.includes(filtro) || descricao.includes(filtro)) {
+        produto.style.display = '';
+      } else {
+        produto.style.display = 'none';
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
