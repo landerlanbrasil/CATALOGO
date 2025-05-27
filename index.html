@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo Virtual</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #121212;
+      color: white;
+    }
+    header {
+      background-color: #000;
+      color: #FFD700;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #1c1c1c;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .mais-vendidos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .secao-titulo {
+      text-align: center;
+      font-size: 1.5em;
+      color: #FFD700;
+      margin-top: 40px;
+    }
+    .produto {
+      background: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .produto:hover {
+      transform: scale(1.02);
+    }
+    .produto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .produto h2 {
+      font-size: 1.2em;
+      margin: 10px 0 5px;
+      color: #FFD700;
+    }
+    .produto p {
+      margin: 5px 15px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    .preco {
+      font-weight: bold;
+      color: #FFD700;
+      margin: 10px 0;
+    }
+    .ver-todos {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .ver-todos a {
+      background-color: #FFD700;
+      color: #000;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .ver-todos a:hover {
+      background-color: #e6c200;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 40px 20px;
+      font-size: 14px;
+    }
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 1200px;
+      margin: auto;
+      gap: 30px;
+    }
+    .footer-column {
+      flex: 1 1 250px;
+    }
+    .footer-column h3 {
+      color: #FFD700;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 5px;
+    }
+    .footer-column img {
+      max-width: 120px;
+      margin: 10px 0;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #ccc;
+    }
+    .whatsapp-icon {
+      width: 24px;
+      vertical-align: middle;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .whatsapp-float img {
+      width: 60px;
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Catálogo Virtual</h1>
+</header>
+
+<nav>
+  <a href="#">Início</a>
+  <a href="#">Produtos</a>
+  <a href="#">Empresa</a>
+  <a href="#">Contato</a>
+</nav>
+
+<h2 class="secao-titulo">Mais Vendidos</h2>
+<section class="mais-vendidos">
+  <div class="produto">
+    <img src="https://via.placeholder.com/300x200" alt="Mais Vendido 1">
+    <h2>Mais Vendido 1</h2>
+    <p>Descrição do produto mais vendido 1.</p>
+    <div class="preco">R$ 120,00</div>
+  </div>
+  <div class="produto">
+    <img src="https://via.placeholder.com/300x200" alt="Mais Vendido 2">
+    <h2>Mais Vendido 2</h2>
+    <p>Descrição do produto mais vendido 2.</p>
+    <div class="preco">R$ 110,00</div>
+  </div>
+  <div class="produto">
+    <img src="https://via.placeholder.com/300x200" alt="Mais Vendido 3">
+    <h2>Mais Vendido 3</h2>
+    <p>Descrição do produto mais vendido 3.</p>
+    <div class="preco">R$ 90,00</div>
+  </div>
+  <div class="produto">
+    <img src="https://via.placeholder.com/300x200" alt="Mais Vendido 4">
+    <h2>Mais Vendido 4</h2>
+    <p>Descrição do produto mais vendido 4.</p>
+    <div class="preco">R$ 130,00</div>
+  </div>
+  <div class="produto">
+    <img src="https://via.placeholder.com/300x200" alt="Mais Vendido 5">
+    <h2>Mais Vendido 5</h2>
+    <p>Descrição do produto mais vendido 5.</p>
+    <div class="preco">R$ 85,00</div>
+  </div>
+</section>
+<div class="ver-todos">
+  <a href="todos-produtos.html">Ver todos os produtos</a>
+</div>
+
+<a class="whatsapp-float" href="https://wa.me/5599999999999" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>SUA EMPRESA</h3>
+      <img src="https://via.placeholder.com/120x60" alt="Logo Empresa">
+      <p>Entregamos aos nossos clientes produtos da mais alta qualidade.</p>
+      <ul>
+        <li><a href="#" style="color:#ccc;">Produtos</a></li>
+        <li><a href="#" style="color:#ccc;">Contatos</a></li>
+        <li><a href="#" style="color:#ccc;">A empresa</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>NOSSOS APP</h3>
+      <p>Baixe nossos aplicativos.</p>
+      <img src="https://via.placeholder.com/120x40?text=Google+Play" alt="Google Play">
+      <img src="https://via.placeholder.com/120x40?text=App+Store" alt="App Store">
+    </div>
+    <div class="footer-column">
+      <h3>CONTATO</h3>
+      <p>Converse conosco via WhatsApp.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; Sua Empresa | 2025<br>
+    CNPJ 00.000.000/0000-00<br>
+    Desenvolvido por ElQuincho</p>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+
