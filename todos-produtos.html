@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Todos os Produtos - Catálogo Virtual</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #121212;
+      color: white;
+    }
+    header {
+      background-color: #000;
+      color: #FFD700;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #1c1c1c;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .todos-produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .produto {
+      background: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .produto:hover {
+      transform: scale(1.02);
+    }
+    .produto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .produto h2 {
+      font-size: 1.2em;
+      margin: 10px 0 5px;
+      color: #FFD700;
+    }
+    .produto p {
+      margin: 5px 15px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    .preco {
+      font-weight: bold;
+      color: #FFD700;
+      margin: 10px 0;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 40px 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Todos os Produtos</h1>
+</header>
+
+<nav>
+  <a href="index.html">Início</a>
+  <a href="todos-produtos.html">Produtos</a>
+  <a href="#">Empresa</a>
+  <a href="#">Contato</a>
+</nav>
+
+<section class="todos-produtos">
+  <div class="produto">
+    <img src="https://via.placeholder.com/300x200" alt="Produto 1">
+    <h2>Produto 1</h2>
+    <p>Descrição do produto 1.</p>
+    <div class="preco">R$ 120,00</div>
+  </div>
+  <div class="produto">
+    <img src="https://via.placeholder.com/300x200" alt="Produto 2">
+    <h2>Produto 2</h2>
+    <p>Descrição do produto 2.</p>
+    <div class="preco">R$ 110,00</div>
+  </div>
+  <div class="produto">
+    <img src="https://via.placeholder.com/300x200" alt="Produto 3">
+    <h2>Produto 3</h2>
+    <p>Descrição do produto 3.</p>
+    <div class="preco">R$ 90,00</div>
+  </div>
+  <!-- Adicione quantos produtos quiser aqui -->
+</section>
+
+<footer>
+  <p>&copy; Sua Empresa | 2025<br>CNPJ 00.000.000/0000-00<br>Desenvolvido por ElQuincho</p>
+</footer>
+
+</body>
+</html>
